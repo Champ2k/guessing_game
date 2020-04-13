@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <link rel='stylesheet' href='css/mycss.css' />
+    <script>
+        $("#btn-next").click(function(){
+    $.ajax({
+        url:'mongodb://0.0.0.0:27017/node-api-101',
+        data:{
+            'answer':[]
+        },
+        dataType:'json'
+        })
+    });
+    </script>
+  </head>
+  <body>
+    <h1>MongoDB Exercises - Array</h1>
+    <h4>Alphabet Guessing Game v1.0</h4>
+    <button id="guessing" href="">Answer</button>
+  </body>
+</html>

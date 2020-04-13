@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <link rel='stylesheet' href='css/mycss.css' />
+    <script>
+      let startbt = document.getElementById('startbt');
+      function start () {
+    console.log('button was clicked');
+  
+    fetch('/', {method: 'POST'})
+      .then(function(response) {
+        if(response.ok) {
+          console.log('Game Start');
+          return;
+        }
+        throw new Error('Request failed.');
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  };
+    </script>
+  </head>
+  <body>
+    <h1>MongoDB Exercises - Array</h1>
+    <h4 id="bt">Alphabet Guessing Game v1.0</h4>
+    <a href='/game'><button id="startbt" onclick="start()">Start</button></a>
+  </body>
+</html>
